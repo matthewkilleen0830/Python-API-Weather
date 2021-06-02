@@ -1,27 +1,25 @@
-# Python API Homework - What's the Weather Like?
+# Python API Project: &nbsp;What's the Weather Like?
 
 ## Background
 
-Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. So let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
+Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. &nbsp;So let's use Python requests, APIs, and JSON traversals to answer a fundamental question: &nbsp;"What's the weather like as we approach the equator?"
 
-Now, we know what you may be thinking: _"Duh. It gets hotter..."_
+Now, we know what you may be thinking: &nbsp;_"Duh. It gets hotter..."_
 
 But, if pressed, how would you **prove** it? 
 
 ## Part I - WeatherPy
 
-In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world, at varying distances from the equator. To accomplish this, you'll be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
+In this example, we will be creating a Python script to visualize the weather of 500+ cities across the world, at varying distances from the equator. &nbsp;To accomplish this, we will be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
 
-The first requirement is to create a series of scatter plots to showcase the following relationships:
+The first objective is to create a series of scatter plots to showcase the following relationships:
 
 * Temperature (F) vs. Latitude
 * Humidity (%) vs. Latitude
 * Cloudiness (%) vs. Latitude
 * Wind Speed (mph) vs. Latitude
 
-After each plot, add a sentence or two explaining what the code is analyzing.
-
-The second requirement is to run linear regression on each relationship. This time, separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
+The second objective is to run linear regression on each relationship. &nbsp;This time, separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
 
 * Northern Hemisphere - Temperature (F) vs. Latitude
 * Southern Hemisphere - Temperature (F) vs. Latitude
@@ -32,9 +30,7 @@ The second requirement is to run linear regression on each relationship. This ti
 * Northern Hemisphere - Wind Speed (mph) vs. Latitude
 * Southern Hemisphere - Wind Speed (mph) vs. Latitude
 
-After each pair of plots, take the time to explain what the linear regression is modeling. For example, describe any relationships you notice and any other analysis you may have.
-
-Your final notebook must:
+The final notebook will:
 
 * Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.
 * Perform a weather check on each of the cities using a series of successive API calls.
@@ -43,15 +39,13 @@ Your final notebook must:
 
 ## Part II - VacationPy
 
-Now let's use your skills in working with weather data to plan future vacations. Use jupyter-gmaps and the Google Places API for this part of the assignment.
+Now let's use weather data to plan future vacations. &nbsp;Use jupyter-gmaps and the Google Places API for this part of the project.
 
-* **Note:** Remember that any API usage beyond the $200 credit will be charged to your personal account. You can set quotas and limits to your daily requests to be sure you can't be charged. Check out [Google Maps Platform Billing](https://developers.google.com/maps/billing/gmp-billing#monitor-and-restrict-consumption) and [Manage your cost of use](https://developers.google.com/maps/documentation/javascript/usage-and-billing#set-caps) for more information.
+This objective:
 
-To complete this part of the assignment,you will need to do the following:
+* Created a heat map that displays the humidity for every city from Part I.
 
-* Create a heat map that displays the humidity for every city from Part I.
-
-* Narrow down the DataFrame to find your ideal weather condition. For example:
+* Narrowed down the DataFrame to find the ideal weather condition. &nbsp;For example:
 
   * A max temperature lower than 80 degrees but higher than 70.
 
@@ -59,10 +53,6 @@ To complete this part of the assignment,you will need to do the following:
 
   * Zero cloudiness.
 
-  * Drop any rows that don't contain all three conditions. You want to be sure the weather is ideal.
+* Used Google Places API to find the first hotel for each city located within 5,000 meters of located coordinates.
 
-  * **Note:** Feel free to adjust your specifications but be sure to limit the number of rows returned by your API requests to a reasonable number; e.g., 10. 
-
-* Use Google Places API to find the first hotel for each city located within 5000 meters of your coordinates.
-
-* Plot the hotels on top of the humidity heatmap with each pin containing the **Hotel Name**, **City**, and **Country**.
+* Plotted the hotels on top of the humidity heatmap with each pin containing the **Hotel Name**, **City**, and **Country**.
